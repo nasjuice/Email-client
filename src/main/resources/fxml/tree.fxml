@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="treeViewAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="856.0" prefWidth="341.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.naasirjusab.jagclient.controllers.TreeViewController">
+   <children>
+      <TreeView fx:id="treeViewPane" layoutX="-27.0" maxHeight="-Infinity" maxWidth="-Infinity" onDragDropped="#dragDrop" onDragOver="#dragOver" prefHeight="574.0" prefWidth="341.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

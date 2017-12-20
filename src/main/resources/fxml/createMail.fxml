@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<BorderPane fx:id="emailLayout" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.naasirjusab.jagclient.controllers.EditorController">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+             <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="229.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </center>
+   <top>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="45.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="toLabel" text="%to">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="toTextField" prefHeight="25.0" prefWidth="421.0">
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="subjectLabel" text="%sub">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="subjectTextField" prefHeight="25.0" prefWidth="421.0">
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="ccLabel" text="%cc">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="ccTextField" prefHeight="25.0" prefWidth="421.0">
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="bccLabel" text="%bcc">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="bccTextField" prefHeight="25.0" prefWidth="421.0">
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="28.0" prefWidth="565.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="sendBtn" mnemonicParsing="false" onAction="#sendEmailHandler" prefHeight="66.0" prefWidth="65.0" text="%send">
+               <HBox.margin>
+                  <Insets left="105.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="attachmentsBtn" mnemonicParsing="false" onAction="#attachmentHandler" prefHeight="38.0" prefWidth="67.0">
+               <graphic>
+                  <ImageView fx:id="attachmentsImg" fitHeight="58.0" fitWidth="60.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/attachments.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveHandler" prefHeight="60.0" prefWidth="84.0">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fx:id="saveImg" fitHeight="58.0" fitWidth="60.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

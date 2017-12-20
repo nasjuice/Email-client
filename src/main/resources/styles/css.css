@@ -1,0 +1,15 @@
+
+#menuBar{
+    -fx-background-color: black;
+}
+
+#editorViewPane{
+    -fx-background-color: orange;
+}
+
+
+#toolbar
+{
+    -fx-background-color: orange;
+    
+}
